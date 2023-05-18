@@ -44,7 +44,7 @@ client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 
 data = {
-        "gzy_test":{"value":"27", "color":"FF6100"},
+        "gzy_test":{"value":"27", "color":get_random_color()},
         "love_days":{"value":get_count(), "color":get_random_color()},
         "birthday_left":{"value":get_birthday(), "color":get_random_color()},
         "words":{"value":get_words(), "color":get_random_color()}}
