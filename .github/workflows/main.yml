@@ -2,7 +2,7 @@ name: morning
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '15 13 * * *'
+    - cron:  '20 21 * * *'
   workflow_dispatch:
 
 jobs:
