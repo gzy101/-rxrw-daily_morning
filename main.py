@@ -39,12 +39,13 @@ def get_words():
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
-
 client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 
-data = {"love_days":{"value":get_count(), "color":get_random_color()},
+data = {
+        "gzy_test":{"value":"27", "color":get_random_color()},
+        "love_days":{"value":get_count(), "color":get_random_color()},
         "birthday_left":{"value":get_birthday(), "color":get_random_color()},
         "words":{"value":get_words(), "color":get_random_color()}}
 res = wm.send_template(user_id, template_id, data)
